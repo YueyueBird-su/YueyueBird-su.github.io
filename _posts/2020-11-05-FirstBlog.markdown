@@ -14,8 +14,6 @@ tags:
 ---
 
 
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
-
 > 我的博客终于在折腾两天后有像样的主题了！！！
 > 谢谢[Hux](https://github.com/huxpro) 在GitHub上分享的GIthub Pages主题！！！
 > 并且最终完成了[个人域名](https://blog.goblps.xyz)的绑定！！！
@@ -27,14 +25,6 @@ tags:
  3. <font color=#999AAA >介绍自己的**专业学习方向**
  4. <font color=#999AAA >持续更新中。。。
 
-
-
-
-
-
-
-
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
 ## 正文
 ### 一、为什么大三了还想做博客？
@@ -70,8 +60,6 @@ tags:
 希望自己以后能够保持刚刚建立博客的初心
 
 
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
-
 ### 三、个人简介
 本人就读于西南交通大学·本科·**地理信息科学**·专业。
 
@@ -81,7 +69,7 @@ tags:
 
 参与的SRTP项目关于**深度学习**（有机会再发，还在学**python**）
 
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
 
 博客就这样开始啦~
 希望未来的自己不会忘记才开始时的初心~
