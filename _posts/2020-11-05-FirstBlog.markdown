@@ -15,15 +15,17 @@ tags:
 
 
 > 我的博客终于在折腾两天后有像样的主题了！！！
+>
 > 谢谢[Hux](https://github.com/huxpro) 在GitHub上分享的GIthub Pages主题！！！
+>
 > 并且最终完成了[个人域名](https://blog.goblps.xyz)的绑定！！！
 
 这篇博客大概这几个方面：
 
- 1. <font color=#999AAA >写博客的**动机**
- 2. <font color=#999AAA >博客内容**未来规划**
- 3. <font color=#999AAA >介绍自己的**专业学习方向**
- 4. <font color=#999AAA >持续更新中。。。
+ 1. 写博客的**动机**
+ 2. 博客内容**未来规划**
+ 3. 介绍自己的**专业学习方向**
+ 4. 持续更新中。。。
 
 
 ## 正文
