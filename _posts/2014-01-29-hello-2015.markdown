@@ -4,7 +4,8 @@ title:      "Hello 2015"
 subtitle:   " \"Hello World, Hello Blog\""
 date:       2015-01-29 12:00:00
 author:     "Hux"
-header-img: "/img/posts_img/post_bg1.jpg"
+header-img: "img/posts_img/2020-11-05-FirstBlog/2020-11-05-post-bg.jpg"
+top: true
 catalog: true
 tags:
     - 个人生活

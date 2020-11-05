@@ -1,19 +1,89 @@
 ---
 layout:     post
 title:      "Go吧LiupSU"
-subtitle:   "My First Blog"
+subtitle:   "\"Hello World, Hello Blog\""
 date:       2020-11-05 12:00:00
-author:     "LPS"
-header-img: "/img/bg5.jpg"
+author:     "LpengSu"
+header-img: "img/posts_img/2020-11-05-FirstBlog/2020-11-05-post-bg.jpg"
 catalog: true
 tags:
     - 个人生活
     - 个人提升
+    - 专业知识
+    - 经验总结
 ---
 
 
-# 起因
-## 老师的建议
-## 自己的想法
-# 博客内容规划
-## 专业方向介绍
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
+> 我的博客终于在折腾两天后有像样的主题了！！！
+> 谢谢[Hux](https://github.com/huxpro) 在GitHub上分享的GIthub Pages主题！！！
+> 并且最终完成了[个人域名](https://blog.goblps.xyz)的绑定！！！
+
+这篇博客大概这几个方面：
+
+ 1. <font color=#999AAA >写博客的**动机**
+ 2. <font color=#999AAA >博客内容**未来规划**
+ 3. <font color=#999AAA >介绍自己的**专业学习方向**
+ 4. <font color=#999AAA >持续更新中。。。
+
+
+
+
+
+
+
+
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
+## 正文
+### 一、为什么大三了还想做博客？
+		
+在大学刚开始没多久，周围的大佬们就开始了购置服务器、搭建个人博客、学习前端、后端、各种编程语言等等一系列操作。当时也不不知道自己干什么去了，就羡慕的看着大佬们在广泛学习各种操作。比如这位[yhqiao](https://www.yhqiao.xyz/)大佬就在我的仰慕中越来越强。希望自己还不算太晚。
+
+再来就是现在已经大三了，当我有了一个博客之后就可以把这个博客当成自己简历的初版。以后给导师或者公司的简历，而不是到关键时刻自己再去回想做了什么。😥
+
+
+
+### 二、未来博客的更新方向和模块划分
+目前计划做的一些东西
+
+ 1. 个人简历，预计将来会在我的个人博客的[About](https://blog.goblps.xyz/about/)板块上展示
+ 2. 总结平时课后作业中遇见的BUG和自己写的有意思的代码
+ 3. 分享平时学习笔记
+
+目前想将博客做成四个大板块
+ - 个人生活
+ 	- 小记
+ 	- 影师、书本、游戏
+ - 个人提升
+ 	- 总结
+ 	- 学习记录 
+ - 专业知识
+ 	- RS、GIS专业课编程笔记
+ 	- 常用个人代码
+ - 经验总结
+ 	- bug解决历史
+ 	- 好用的网站收录
+ 	- 分享的资源链接
+
+希望自己以后能够保持刚刚建立博客的初心
+
+
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
+### 三、个人简介
+本人就读于西南交通大学·本科·**地理信息科学**·专业。
+
+由于学校的教学机制，也熟悉一些**测绘**、**遥感**方向的专业知识。
+
+目前会的编程语言仅限于基础的**Matlab**、**C/C++**、**C#**
+
+参与的SRTP项目关于**深度学习**（有机会再发，还在学**python**）
+
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
+博客就这样开始啦~
+希望未来的自己不会忘记才开始时的初心~
+
+<tt>——LpengSu于2020.11.06日
