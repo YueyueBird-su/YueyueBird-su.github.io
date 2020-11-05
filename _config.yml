@@ -1,0 +1,111 @@
+# Site settings
+title: YueyueBird-su
+SEOTitle: YueyueBird-su | Blog
+header-img: img/bg4.jpg
+email: yueyuebird.swjtu@gmail.com
+description: "关于地理信息，遥感 | 这里是 @YueyueBird-su 的个人博客，与你一起学习、记录。"
+keyword: "YueyueBird-su, 个人网站, 博客, 互联网, GIS, RS"
+url: "https://github.com/YueyueBird-su/YueyueBird-su.github.io"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+# Publish posts or collection documents with a future date.
+future: true
+
+# SNS settings
+RSS: false
+#weibo_username:     YueyueBird-su
+zhihu_username:     Wing
+github_username:    YueyueBird-su
+#twitter_username:   YueyueBird-su
+#facebook_username:  huxpro
+#linkedin_username:  firstname-lastname-idxxxx
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN  
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+
+
+# Disqus settings
+disqus_username: yueyue
+
+# Netease settings
+netease_comment: false
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+ga_track_id: 'G-BEB56BM3FK'            #GA_id,创建之后会给你
+ga_domain: auto                         #默认是auto，有域名后更改
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "一个刚刚起步的菜鸟<br>一个GIS本科在读的学生"
+sidebar-avatar: /img/avatar-yueyue.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
+
+
+# Friends
+friends: [
+    {
+    #     title: "Su",
+    #     href: "http://su/"
+    # },{
+        title: "YueyueBird-su",
+        href: "https://github.com/YueyueBird-su"
+    }
+]
