@@ -4,7 +4,7 @@ title:      "Go吧LiupSU"
 subtitle:   "My First Blog"
 date:       2020-11-05 12:00:00
 author:     "LPS"
-header-img: "/bg5.jpg"
+header-img: "/img/bg5.jpg"
 catalog: true
 tags:
     - 个人生活
