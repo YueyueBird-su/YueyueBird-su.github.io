@@ -7,8 +7,8 @@ author:     "Hux"
 header-img: "/img/posts_img/post_bg1.jpg"
 catalog: true
 tags:
-    - 生活
-    - Meta
+    - 个人生活
+    - 个人提升
 ---
 
 > “Yeah It's on. ”

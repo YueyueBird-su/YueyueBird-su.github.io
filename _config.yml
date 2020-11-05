@@ -1,10 +1,10 @@
 # Site settings
-title: YueyueBird-su
-SEOTitle: YueyueBird-su | Blog
-header-img: img/bg4.jpg
+title: Go吧LpengSu
+SEOTitle: Go吧LpengSu | Blog
+header-img: img/bg5.jpg
 email: yueyuebird.swjtu@gmail.com
-description: "关于地理信息，遥感 | 这里是 @YueyueBird-su 的个人博客，与你一起学习、记录。"
-keyword: "YueyueBird-su, 个人网站, 博客, 互联网, GIS, RS"
+description: "关于地理信息，遥感 | 这里是 @LPS 的个人博客，与你一起学习、记录。"
+keyword: "LpengSu, 个人网站, 博客, 互联网, GIS, RS"
 url: "https://github.com/YueyueBird-su/YueyueBird-su.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -14,10 +14,10 @@ future: true
 # SNS settings
 RSS: false
 #weibo_username:     YueyueBird-su
-zhihu_username:     Wing
+zhihu_username:     wing-51-86
 github_username:    YueyueBird-su
 #twitter_username:   YueyueBird-su
-#facebook_username:  huxpro
+#facebook_username:  
 #linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -59,7 +59,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: yueyue
+disqus_username: LPS
 
 # Netease settings
 netease_comment: false
@@ -72,7 +72,7 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: 'G-BEB56BM3FK'            #GA_id,创建之后会给你
-ga_domain: auto                         #默认是auto，有域名后更改
+ga_domain: blog.goblps.xyz                         #默认是auto，有域名后更改
 
 
 # Sidebar settings
