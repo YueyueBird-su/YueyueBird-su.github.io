@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Go吧LpengSU"
+title:      "Go吧LpengSu"
 subtitle:   "\"Hello World, Hello Blog\""
 date:       2020-11-05 12:00:00
 author:     "LpengSu"
