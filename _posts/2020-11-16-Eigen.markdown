@@ -4,13 +4,14 @@ title:      "Eigen概述"
 subtitle:   "\"Eigen、OpenCv、Matlab语句对照\""
 date:       2020-11-16 21:00:00
 author:     "LpengSu"
-header-img: "img/posts_img/2020-11-11/bg.jpg"
+header-img: "img/posts_img/2020-11-16-Eigen/bg.jpg"
 catalog: true
 tags:
     - 个人提升
  	- 学习记录
     - Eigen
 ---
+
 
 #### eigen配置（windows vs系列）：
 
@@ -38,7 +39,8 @@ opencv矩阵结构为：cv::Mat或者cv::Mat_<type>等，当需要与eigen的矩
 
 ```c
 #include<opencv2/core/eigen.hpp>
-cv::eigen2cv和cv::cv2eigen
+cv::eigen2cv
+cv::cv2eigen
 ```
 
 实例：
@@ -246,7 +248,7 @@ x.dot(y)                  // dot(x, y)        //点积
 x.cross(y)                // cross(x, y)      //交叉积，需要头文件 #include <Eigen/Geometry>  
   
   
- 类型转换  
+//类型转换  
 // Eigen                  // Matlab             // 注释  
 A.cast<double>();         // double(A)          //变成双精度类型  
 A.cast<float>();          // single(A)          //变成单精度类型  
@@ -270,4 +272,3 @@ Matrix2i mat2x2(data);                    // 将 data 复制到 mat2x2
 Matrix2i::Map(data) = 2*mat2x2;           // 使用 2*mat2x2 覆写data的元素   
 MatrixXi::Map(data, 2, 2) += mat2x2;      // 将 mat2x2 加到 data的元素上 (当编译时不知道大小时，可选语法)    
 ```
-
