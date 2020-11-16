@@ -1,15 +1,15 @@
 ---
 layout:     post
-title:      "Eigen与cv矩阵转换，Eigen与Matlab函数对照"
+title:      "Eigen概述"
 subtitle:   "Eigen、OpenCv、Matlab语句对照"
-date:       2015-01-29 12:00:00
+date:       2020-11-16 21:00:00
 author:     "LPS"
-header-img: "/bg.jpg"
+header-img: "img/posts_img/2020-11-11/bg.jpg"
 catalog: true
 tags:
     - 个人提升
- 	    - 学习记录
-            - Eigen
+ 	- 学习记录
+    - Eigen
 ---
 
 #### eigen配置（windows vs系列）：
