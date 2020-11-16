@@ -8,12 +8,12 @@ header-img: "img/posts_img/2020-11-16-Eigen/bg.jpg"
 catalog: true
 tags:
     - 个人提升
- 	- 学习记录
+    - 学习记录
     - Eigen
 ---
 
 
-#### eigen配置（windows vs系列）：
+## eigen配置（windows vs系列）：
 
 eigen的配置很简单，下载解压后，在VC++目录下的包含目录中，将eigen的路径包含进去，就可以使用了。
 
