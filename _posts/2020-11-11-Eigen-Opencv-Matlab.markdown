@@ -1,0 +1,273 @@
+---
+layout:     post
+title:      "Eigen与cv矩阵转换，Eigen与Matlab函数对照"
+subtitle:   "Eigen、OpenCv、Matlab语句对照"
+date:       2015-01-29 12:00:00
+author:     "LPS"
+header-img: "/bg.jpg"
+catalog: true
+tags:
+    - 个人提升
+ 	    - 学习记录
+            - Eigen
+---
+
+#### eigen配置（windows vs系列）：
+
+eigen的配置很简单，下载解压后，在VC++目录下的包含目录中，将eigen的路径包含进去，就可以使用了。
+
+#### eigen的简单使用说明及实例：
+
+```c
+typedef Matrix <double, Dynamic, Dynamic> MatrixXd;//定义动态矩阵
+```
+
+矩阵的大小查询方法有： **rows()**, **cols()** and **size()**，分别表示矩阵的行数、列数和元素总数。可以通过 **resize()**方法改变动态矩阵的大小。
+
+> 注意：
+>
+> (1)、固定大小的矩阵是不能使用resize()来修改矩阵的大小；
+>
+> (2)、resize()函数会析构掉原来的数据，因此调用resize()函数之后将不能保证元素的值不改变；
+>
+> (3)、使用”=”操作符操作动态矩阵时，如果左右两边的矩阵大小不等，则左边的动态矩阵的大小会被修改为右边的大小。
+
+#### OpenCv与Eigen的交互
+
+opencv矩阵结构为：cv::Mat，或者cv::Mat_<type>等，当需要与eigen的矩阵结构相互转换时主要使用函数：
+
+```c
+#include<opencv2/core/eigen.hpp>
+cv::eigen2cv和cv::cv2eigen
+```
+
+实例：
+
+```c
+#include <Eigen/Dense>
+#include <iostream>
+#include <opencv2/core/eigen.hpp>
+#include <opencv2/opencv.hpp>
+ 
+using namespace std;
+using namespace cv;
+using namespace Eigen;
+ 
+void main()
+{
+	Mat img = imread("jasen.jpg",CV_LOAD_IMAGE_GRAYSCALE);
+	int row = img.rows;
+	int col = img.cols;
+	MatrixXd m(row, col);
+	cv2eigen(img,m);
+	return;
+}
+```
+
+```c
+#include <Eigen/Dense>
+#include <iostream>
+#include <opencv2/core/eigen.hpp>
+#include <opencv2/opencv.hpp>
+ 
+using namespace std;
+using namespace cv;
+using namespace Eigen;
+ 
+void main()
+{
+	Mat img;
+	Matrix<int,100,100> m ;
+	m.fill(255);
+	eigen2cv(m, img);
+	return;
+}
+```
+
+#### eigen与matlab函数对应关系
+
+```c
+#include <Eigen/Dense>   
+// 基本用法  
+// Eigen          // Matlab           // 注释  
+x.size()          // length(x)        // 向量的长度  
+C.rows()          // size(C,1)        // 矩阵的行数  
+C.cols()          // size(C,2)        // 矩阵的列数  
+x(i)              // x(i+1)           // 访问向量元素（Matlab的下标从1开始计数）  
+C(i,j)            // C(i+1,j+1)       // 访问矩阵元素  
+    
+A << 1, 2, 3,     // 初始化A，元素也可以是矩阵，先按列堆叠，再按行堆叠。  
+     4, 5, 6,       
+     7, 8, 9;       
+B << A, A, A;     // B 是3个A水平排列  
+A.fill(10);       // 将A的所有元素填充为10  
+  
+// Eigen                                    // Matlab                       注释  
+MatrixXd::Identity(rows,cols)               // eye(rows,cols)               //单位矩阵  
+C.setIdentity(rows,cols)                    // C = eye(rows,cols)           //单位矩阵  
+MatrixXd::Zero(rows,cols)                   // zeros(rows,cols)             //全零矩阵  
+C.setZero(rows,cols)                        // C = zeros(rows,cols)         //全零矩阵  
+MatrixXd::Ones(rows,cols)                   // ones(rows,cols)              //全一矩阵  
+C.setOnes(rows,cols)                        // C = ones(rows,cols)          //全一矩阵  
+MatrixXd::Random(rows,cols)                 // rand(rows,cols)*2-1          //MatrixXd::Random 返回范围为(-1, 1)的均匀分布的随机数  
+C.setRandom(rows,cols)                      // C = rand(rows,cols)*2-1      //返回范围为(-1, 1)的均匀分布的随机数  
+VectorXd::LinSpaced(size,low,high)          // linspace(low,high,size)'     //返回size个等差数列，第一个数为low，最后一个数为high  
+v.setLinSpaced(size,low,high)               // v = linspace(low,high,size)' //返回size个等差数列，第一个数为low，最后一个数为high  
+VectorXi::LinSpaced(((hi-low)/step)+1,      // low:step:hi                  //以step为步长的等差数列。((hi-low)/step)+1为个数  
+                    low,low+step*(size-1))  //  
+  
+  
+// Matrix 切片和块。下面列出的所有表达式都是可读/写的。  
+// 使用模板参数更快（如第2个）。注意：Matlab是的下标是从1开始的。  
+// Eigen                           // Matlab                        // 注释  
+x.head(n)                          // x(1:n)                        //前n个元素  
+x.head<n>()                        // x(1:n)                        //前n个元素  
+x.tail(n)                          // x(end - n + 1: end)           //倒数n个元素  
+x.tail<n>()                        // x(end - n + 1: end)           //倒数n个元素  
+x.segment(i, n)                    // x(i+1 : i+n)                  //切片  
+x.segment<n>(i)                    // x(i+1 : i+n)                  //切片  
+P.block(i, j, rows, cols)          // P(i+1 : i+rows, j+1 : j+cols) //块  
+P.block<rows, cols>(i, j)          // P(i+1 : i+rows, j+1 : j+cols) //块  
+P.row(i)                           // P(i+1, :)                     //第i行  
+P.col(j)                           // P(:, j+1)                     //第j列  
+P.leftCols<cols>()                 // P(:, 1:cols)                  //前cols列  
+P.leftCols(cols)                   // P(:, 1:cols)                  //前cols列  
+P.middleCols<cols>(j)              // P(:, j+1:j+cols)              //中间cols列  
+P.middleCols(j, cols)              // P(:, j+1:j+cols)              //中间cols列  
+P.rightCols<cols>()                // P(:, end-cols+1:end)          //后cols列  
+P.rightCols(cols)                  // P(:, end-cols+1:end)          //后cols列  
+P.topRows<rows>()                  // P(1:rows, :)                  //前rows行  
+P.topRows(rows)                    // P(1:rows, :)                  //前rows行  
+P.middleRows<rows>(i)              // P(i+1:i+rows, :)              //中间rows行  
+P.middleRows(i, rows)              // P(i+1:i+rows, :)              //中间rows行  
+P.bottomRows<rows>()               // P(end-rows+1:end, :)          //最后rows行  
+P.bottomRows(rows)                 // P(end-rows+1:end, :)          //最后rows行  
+P.topLeftCorner(rows, cols)        // P(1:rows, 1:cols)             //左上角块  
+P.topRightCorner(rows, cols)       // P(1:rows, end-cols+1:end)     //右上角块  
+P.bottomLeftCorner(rows, cols)     // P(end-rows+1:end, 1:cols)     //左下角块  
+P.bottomRightCorner(rows, cols)    // P(end-rows+1:end, end-cols+1:end) //右下角块  
+P.topLeftCorner<rows,cols>()       // P(1:rows, 1:cols)                 //左上角块  
+P.topRightCorner<rows,cols>()      // P(1:rows, end-cols+1:end)         //右上角块  
+P.bottomLeftCorner<rows,cols>()    // P(end-rows+1:end, 1:cols)         //左下角块  
+P.bottomRightCorner<rows,cols>()   // P(end-rows+1:end, end-cols+1:end) //右下角块  
+  
+  
+// 特别说明：Eigen的交换函数进行了高度优化  
+// Eigen                           // Matlab  
+R.row(i) = P.col(j);               // R(i, :) = P(:, j)  
+R.col(j1).swap(mat1.col(j2));      // R(:, [j1 j2]) = R(:, [j2, j1]) //交换列  
+  
+  
+// Views, transpose, etc;  
+// Eigen                           // Matlab  
+R.adjoint()                        // R'                    // 共轭转置  
+R.transpose()                      // R.' or conj(R')       // 可读/写 转置  
+R.diagonal()                       // diag(R)               // 可读/写 对角元素  
+x.asDiagonal()                     // diag(x)               // 对角矩阵化  
+R.transpose().colwise().reverse()  // rot90(R)              // 可读/写 逆时针旋转90度  
+R.rowwise().reverse()              // fliplr(R)             // 水平翻转  
+R.colwise().reverse()              // flipud(R)             // 垂直翻转  
+R.replicate(i,j)                   // repmat(P,i,j)         // 复制矩阵，垂直复制i个，水平复制j个  
+  
+  
+// 四则运算，和Matlab相同。但Matlab中不能使用*=这样的赋值运算符  
+// 矩阵 - 向量    矩阵 - 矩阵      矩阵 - 标量  
+y  = M*x;          R  = P*Q;        R  = P*s;  
+a  = b*M;          R  = P - Q;      R  = s*P;  
+a *= M;            R  = P + Q;      R  = P/s;  
+                   R *= Q;          R  = s*P;  
+                   R += Q;          R *= s;  
+                   R -= Q;          R /= s;  
+  
+  
+// 逐像素操作Vectorized operations on each element independently  
+// Eigen                       // Matlab        //注释  
+R = P.cwiseProduct(Q);         // R = P .* Q    //逐元素乘法  
+R = P.array() * s.array();     // R = P .* s    //逐元素乘法（s为标量）  
+R = P.cwiseQuotient(Q);        // R = P ./ Q    //逐元素除法  
+R = P.array() / Q.array();     // R = P ./ Q    //逐元素除法  
+R = P.array() + s.array();     // R = P + s     //逐元素加法（s为标量）  
+R = P.array() - s.array();     // R = P - s     //逐元素减法（s为标量）  
+R.array() += s;                // R = R + s     //逐元素加法（s为标量）  
+R.array() -= s;                // R = R - s     //逐元素减法（s为标量）  
+R.array() < Q.array();         // R < Q         //逐元素比较运算  
+R.array() <= Q.array();        // R <= Q        //逐元素比较运算  
+R.cwiseInverse();              // 1 ./ P        //逐元素取倒数  
+R.array().inverse();           // 1 ./ P        //逐元素取倒数  
+R.array().sin()                // sin(P)        //逐元素计算正弦函数  
+R.array().cos()                // cos(P)        //逐元素计算余弦函数  
+R.array().pow(s)               // P .^ s        //逐元素计算幂函数  
+R.array().square()             // P .^ 2        //逐元素计算平方  
+R.array().cube()               // P .^ 3        //逐元素计算立方  
+R.cwiseSqrt()                  // sqrt(P)       //逐元素计算平方根  
+R.array().sqrt()               // sqrt(P)       //逐元素计算平方根  
+R.array().exp()                // exp(P)        //逐元素计算指数函数  
+R.array().log()                // log(P)        //逐元素计算对数函数  
+R.cwiseMax(P)                  // max(R, P)     //逐元素计算R和P的最大值  
+R.array().max(P.array())       // max(R, P)     //逐元素计算R和P的最大值  
+R.cwiseMin(P)                  // min(R, P)     //逐元素计算R和P的最小值  
+R.array().min(P.array())       // min(R, P)     //逐元素计算R和P的最小值  
+R.cwiseAbs()                   // abs(P)        //逐元素计算R和P的绝对值  
+R.array().abs()                // abs(P)        //逐元素计算绝对值  
+R.cwiseAbs2()                  // abs(P.^2)     //逐元素计算平方  
+R.array().abs2()               // abs(P.^2)     //逐元素计算平方  
+(R.array() < s).select(P,Q );  // (R < s ? P : Q)                             //根据R的元素值是否小于s，选择P和Q的对应元素  
+R = (Q.array()==0).select(P,A) // R(Q==0) = P(Q==0) R(Q!=0) = P(Q!=0)         //根据Q中元素等于零的位置选择P中元素  
+R = P.unaryExpr(ptr_fun(func)) // R = arrayfun(func, P)     // 对P中的每个元素应用func函数  
+  
+  
+// Reductions.  
+int r, c;  
+// Eigen                  // Matlab                 //注释  
+R.minCoeff()              // min(R(:))              //最小值  
+R.maxCoeff()              // max(R(:))              //最大值  
+s = R.minCoeff(&r, &c)    // [s, i] = min(R(:)); [r, c] = ind2sub(size(R), i); //计算最小值和它的位置  
+s = R.maxCoeff(&r, &c)    // [s, i] = max(R(:)); [r, c] = ind2sub(size(R), i); //计算最大值和它的位置  
+R.sum()                   // sum(R(:))              //求和（所有元素）  
+R.colwise().sum()         // sum(R)                 //按列求和  
+R.rowwise().sum()         // sum(R, 2) or sum(R')'  //按行求和  
+R.prod()                  // prod(R(:))                 //累积  
+R.colwise().prod()        // prod(R)                    //按列累积  
+R.rowwise().prod()        // prod(R, 2) or prod(R')'    //按行累积  
+R.trace()                 // trace(R)                   //迹  
+R.all()                   // all(R(:))                  //是否所有元素都非零  
+R.colwise().all()         // all(R)                     //按列判断，是否该列所有元素都非零  
+R.rowwise().all()         // all(R, 2)                  //按行判断，是否该行所有元素都非零  
+R.any()                   // any(R(:))                  //是否有元素非零  
+R.colwise().any()         // any(R)                     //按列判断，是否该列有元素都非零  
+R.rowwise().any()         // any(R, 2)                  //按行判断，是否该行有元素都非零  
+  
+  
+// 点积，范数等  
+// Eigen                  // Matlab           // 注释  
+x.norm()                  // norm(x).         //范数（注意：Eigen中没有norm(R)）  
+x.squaredNorm()           // dot(x, x)        //平方和（注意：对于复数而言，不等价）  
+x.dot(y)                  // dot(x, y)        //点积  
+x.cross(y)                // cross(x, y)      //交叉积，需要头文件 #include <Eigen/Geometry>  
+  
+  
+ 类型转换  
+// Eigen                  // Matlab             // 注释  
+A.cast<double>();         // double(A)          //变成双精度类型  
+A.cast<float>();          // single(A)          //变成单精度类型  
+A.cast<int>();            // int32(A)           //编程整型  
+A.real();                 // real(A)            //实部  
+A.imag();                 // imag(A)            //虚部  
+// 如果变换前后的类型相同，不做任何事情。  
+  
+  
+// 注意：Eigen中，绝大多数的涉及多个操作数的运算都要求操作数具有相同的类型  
+MatrixXf F = MatrixXf::Zero(3,3);  
+A += F;                // 非法。Matlab中允许。（单精度+双精度）  
+A += F.cast<double>(); // 将F转换成double，并累加。（一般都是在使用时临时转换）  
+  
+  
+// Eigen 可以将已存储数据的缓存 映射成 Eigen矩阵  
+float array[3];  
+Vector3f::Map(array).fill(10);            // create a temporary Map over array and sets entries to 10  
+int data[4] = {1, 2, 3, 4};  
+Matrix2i mat2x2(data);                    // 将 data 复制到 mat2x2  
+Matrix2i::Map(data) = 2*mat2x2;           // 使用 2*mat2x2 覆写data的元素   
+MatrixXi::Map(data, 2, 2) += mat2x2;      // 将 mat2x2 加到 data的元素上 (当编译时不知道大小时，可选语法)    
+```
+
