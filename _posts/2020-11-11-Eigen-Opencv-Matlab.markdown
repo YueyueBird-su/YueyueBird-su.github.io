@@ -1,9 +1,9 @@
 ---
 layout:     post
 title:      "Eigen概述"
-subtitle:   "Eigen、OpenCv、Matlab语句对照"
+subtitle:   "\"Eigen、OpenCv、Matlab语句对照\""
 date:       2020-11-16 21:00:00
-author:     "LPS"
+author:     "LpengSu"
 header-img: "img/posts_img/2020-11-11/bg.jpg"
 catalog: true
 tags:
@@ -34,7 +34,7 @@ typedef Matrix <double, Dynamic, Dynamic> MatrixXd;//定义动态矩阵
 
 #### OpenCv与Eigen的交互
 
-opencv矩阵结构为：cv::Mat，或者cv::Mat_<type>等，当需要与eigen的矩阵结构相互转换时主要使用函数：
+opencv矩阵结构为：cv::Mat或者cv::Mat_<type>等，当需要与eigen的矩阵结构相互转换时主要使用函数：
 
 ```c
 #include<opencv2/core/eigen.hpp>
