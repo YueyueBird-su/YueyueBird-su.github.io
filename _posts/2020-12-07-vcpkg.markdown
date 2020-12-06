@@ -22,11 +22,11 @@ tags:
 
 打开cmd，进入vcpkg目录，执行bootstrap-vcpkg.bat用于编译
 
-![image-20201117011406060](img/posts_img/2020-12/2020-12-07/image-20201117011406060.png)
+![image-20201117011406060](../img/posts_img/2020-12/2020-12-07/image-20201117011406060.png)
 
 执行vcpkgg integrate install
 
-![image-20201117011659112](img/posts_img/2020-12/2020-12-07/image-20201117011659112.png)
+![image-20201117011659112](../img/posts_img/2020-12/2020-12-07/image-20201117011659112.png)
 
 #### 3、安装第三方库
 
@@ -38,7 +38,7 @@ vcpkg install + [name]
 
 例子：安装一个GDAL试试
 
-![image-20201117012117091](img/posts_img/2020-12/2020-12-07/image-20201117012117091.png)
+![image-20201117012117091](../img/posts_img/2020-12/2020-12-07/image-20201117012117091.png)
 
 ### 安装太慢的解决方法
 
