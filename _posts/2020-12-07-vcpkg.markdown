@@ -1,0 +1,47 @@
+---
+layout:     post
+title:      "使用VCpkg管理C/C++包"
+subtitle:   "使用VCpkg管理和下载c++库文件"
+date:       2020-12-07 00:04:00
+author:     "LpengSu"
+header-img: "img/posts_img/2020-12/2020-06-bg.jpg"
+catalog: true
+tags:
+    - 经验总结
+---
+
+### 使用VCpkg管理C/C++包
+
+#### 1、下载vcpkg
+
+在[GitHub](https://github.com/microsoft/vcpkg)上下载vcpkg，下载完成后将目录加入系统变量（也可以不加入，只是调用的时候需要在安装目录下使用vcpkg.exe + install + 【库名】进行安装）
+
+#### 2、准备编译项目
+
+需要在本地编译vcpkg，并且需要安装vs2019/vs2017。
+
+打开cmd，进入vcpkg目录，执行bootstrap-vcpkg.bat用于编译
+
+![image-20201117011406060](img\posts_img\2020-12\2020-12-07\image-20201117011406060.png)
+
+执行vcpkgg integrate install
+
+![image-20201117011659112](img\posts_img\2020-12\2020-12-07\image-20201117011659112.png)
+
+#### 3、安装第三方库
+
+使用
+
+```c
+vcpkg install + [name]
+```
+
+例子：安装一个GDAL试试
+
+![image-20201117012117091](img\posts_img\2020-12\2020-12-07\image-20201117012117091.png)
+
+### 安装太慢的解决方法
+
+手动下载源代码
+
+在命令行界面查看正在下载的地址，赋值该地址借助别的下载软件去下载，然后修改为vcpkg安装目录下downloads的temp文件夹中的相同名字，复制到downloads文件夹下，然后继续安装。
