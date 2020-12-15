@@ -21,12 +21,13 @@ tags:
 需要在本地编译vcpkg，并且需要安装vs2019/vs2017。
 
 打开cmd，进入vcpkg目录，执行bootstrap-vcpkg.bat用于编译
+[![rQMIeS.png](https://s3.ax1x.com/2020/12/15/rQMIeS.png)](https://imgchr.com/i/rQMIeS)
 
-![image-20201117011406060](https://github.com/YueyueBird-su/YueyueBird-su.github.io/blob/main/img/posts_img/2020-12/2020-12-07/image-20201117011406060.png)
+
 
 执行vcpkgg integrate install
 
-![image-20201117011659112](https://github.com/YueyueBird-su/YueyueBird-su.github.io/blob/main/img/posts_img/2020-12/2020-12-07/image-20201117011659112.png)
+[![rQM4L8.png](https://s3.ax1x.com/2020/12/15/rQM4L8.png)](https://imgchr.com/i/rQM4L8)
 
 #### 3、安装第三方库
 
@@ -37,8 +38,7 @@ vcpkg install + [name]
 ```
 
 例子：安装一个GDAL试试
-
-![image-20201117012117091](https://github.com/YueyueBird-su/YueyueBird-su.github.io/blob/main/img/posts_img/2020-12/2020-12-07/image-20201117012117091.png)
+[![rQMhsf.png](https://s3.ax1x.com/2020/12/15/rQMhsf.png)](https://imgchr.com/i/rQMhsf)
 
 ### 安装太慢的解决方法
 
