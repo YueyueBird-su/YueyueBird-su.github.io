@@ -4,7 +4,7 @@ title:      "《数字图像处理》常用函数汇总"
 subtitle:   "影像几何校正"
 date:       2021-01-14 12:00:00
 author:     "LpengSu"
-header-img: "img/posts_img/2020-11-17-JiHeJiaoZheng/bg.jpg"
+header-img: "https://raw.githubusercontent.com/YueyueBird-su/Pitcture_Git/main/images/20201117.jpg"
 catalog: true
 tags:
     - 个人提升

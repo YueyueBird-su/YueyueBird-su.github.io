@@ -4,7 +4,7 @@ title:      "Windows 小技巧"
 subtitle:   "关闭软件自动更新、自动拨号上网"
 date:       2020-12-06 23:23:00
 author:     "LpengSu"
-header-img: "img/posts_img/2020-12/2020-06-bg.jpg"
+header-img: "https://raw.githubusercontent.com/YueyueBird-su/Pitcture_Git/main/images/2020-06-bg.jpg"
 catalog: true
 tags:
     - 经验总结

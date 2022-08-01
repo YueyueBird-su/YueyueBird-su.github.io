@@ -4,7 +4,7 @@ title:      "Go吧LpengSu"
 subtitle:   "\"Hello World, Hello Blog\""
 date:       2020-11-05 12:00:00
 author:     "LpengSu"
-header-img: "img/posts_img/2020-11-05-FirstBlog/2020-11-05-post-bg.jpg"
+header-img: "https://raw.githubusercontent.com/YueyueBird-su/Pitcture_Git/main/images/2020-11-05-post-bg.jpg"
 catalog: true
 tags:
     - 个人生活
@@ -30,7 +30,7 @@ tags:
 
 ## 正文
 ### 一、为什么大三了还想做博客？
-		
+
 在大学刚开始没多久，周围的大佬们就开始了购置服务器、搭建个人博客、学习前端、后端、各种编程语言等等一系列操作。当时也不不知道自己干什么去了，就羡慕的看着大佬们在广泛学习各种操作。比如这位[yhqiao](https://www.yhqiao.xyz/)大佬就在我的仰慕中越来越强。希望自己还不算太晚。
 
 再来就是现在已经大三了，当我有了一个博客之后就可以把这个博客当成自己简历的初版。以后给导师或者公司的简历，而不是到关键时刻自己再去回想做了什么。😥
