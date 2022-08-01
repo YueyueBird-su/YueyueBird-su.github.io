@@ -5,10 +5,10 @@
 
 {% if include.type == 'post' %}
 <style type="text/css">
-    header.intro-header{
+    header.intro-header {
         position: relative;
         background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}');
-        background-image: url("{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}");
+        background-image: url("{ page.header-img }");
         background: {{ page.header-bg-css }};
     }
 
