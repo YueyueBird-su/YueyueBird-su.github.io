@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "《数字图像处理》常用函数汇总"
-subtitle:   "影像几何校正"
-date:       2021-01-14 12:00:00
+title:      "INPHO软件卫星影像密集匹配教程"
+subtitle:   "DTM/DSM生成"
+date:       2022-08-01 21:00:00
 author:     "LpengSu"
 header-img: "img/posts_img/2020-11-17-JiHeJiaoZheng/bg.jpg"
 catalog: true
