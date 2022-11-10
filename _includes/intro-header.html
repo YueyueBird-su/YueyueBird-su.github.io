@@ -10,9 +10,9 @@
         background: {{ page.header-bg-css }};
     }-->
 <style type="text/css">
-    header.intro-header{
+        header.intro-header{
         position: relative;
-        background-image: url("{page.header-img}");
+        background-image: url("{% if page.header-img %}{{ page.header-img }}{% endif %}");
         background: {{ page.header-bg-css }};
     }
 
