@@ -2,7 +2,7 @@
 layout:     post
 title:      ""
 subtitle:   ""
-date:       2015-01-29 12:00:00
+date:       {{date}} {{time}}
 author:     "LpengSu"
 header-img: "/bg.jpg"
 catalog: true
