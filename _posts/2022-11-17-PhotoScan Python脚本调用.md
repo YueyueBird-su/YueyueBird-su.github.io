@@ -4,7 +4,7 @@ title:      "PhotoScan Python脚本开发与使用"
 subtitle:   "PhotoScan 二次开发"
 date:       2022-11-17 15:00:11
 author:     "LpengSu"
-header-img: https://www.metashape.cn/ueditor/1582691016141_75980.png/getImage.do
+header-img: https://raw.githubusercontent.com/YueyueBird-su/Pitcture_Git/main/images/image-20221117154954724.png
 catalog: true
 tags:
     - 总结
