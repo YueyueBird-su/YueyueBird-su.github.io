@@ -9,7 +9,7 @@ catalog: true
 tags:
     - 个人提升
     - 学习记录 
-    - InPho教程
+    - PhotoScan教程
     - 密集匹配
     - 总结
 ---
