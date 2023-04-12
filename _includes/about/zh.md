@@ -1,5 +1,5 @@
 # 联系方式
-* Email：liupengsu@foxmail.com
+* Email：yueyuebird.swjtu@gmail.com
 
 # 个人信息
 * 兴趣爱好：羽毛球/乒乓球/网球/骑行

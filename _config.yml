@@ -3,8 +3,8 @@ title: Go吧LpengSu
 SEOTitle: Go吧LpengSu | Blog
 header-img: img/bg5.jpg
 email: yueyuebird.swjtu@gmail.com
-description: "关于地理信息，遥感 | 这里是 @LPS 的个人博客，与你一起学习、记录。"
-keyword: "LpengSu, 个人网站, 博客, 互联网, GIS, RS"
+description: "关于地理信息，遥感 | 这里是 @Lpeng 的个人博客，与你一起学习、记录。"
+keyword: "LpengSu, 个人网站, 博客, 互联网, GIS, RS, 三维重建"
 url: "https://github.com/YueyueBird-su/YueyueBird-su.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -12,7 +12,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 future: true
 
 # SNS settings
-RSS: false
+RSS: true
 #weibo_username:     YueyueBird-su
 zhihu_username:     wing-51-86
 github_username:    YueyueBird-su
@@ -77,7 +77,7 @@ ga_domain: blog.goblps.xyz                         #默认是auto，有域名后
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "一个刚刚起步的菜鸟<br>一个GIS本科在读的学生"
+sidebar-about-description: "一个刚入门的菜鸟<br>努力让生活更美好"
 sidebar-avatar: /img/avatar-yueyue.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
