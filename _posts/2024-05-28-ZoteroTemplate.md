@@ -4,7 +4,7 @@ title:      "Zotero read notes template"
 subtitle:   "论文笔记阅读模板"
 date:       2024-05-28 22:18:30
 author:     "LpengSu"
-header-img: "https://raw.githubusercontent.com/YueyueBird-su/Pitcture_Git/main/images/image-20240528175216057.png"
+header-img: https://raw.githubusercontent.com/YueyueBird-su/Pitcture_Git/main/images/image-20240528225048199.png
 catalog: true
 tags:
     - 经验总结
@@ -12,6 +12,12 @@ tags:
 ---
 
 # Zotero read notes template
+
+在本文档中，提交成功后会出现Liquid语法错误，需要用以下Liquid代码块escape
+
+**{% raw %}
+...
+{% endraw %}**
 
 ## 一、论文笔记模板
 
@@ -189,4 +195,3 @@ ${{
 }}$
 {% endraw %}
 ```
-
