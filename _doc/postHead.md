@@ -26,5 +26,6 @@ tags:
     - 分享的资源链接
     - Inpho教程
     - PhotoScan教程
+    - Zotero技巧
     - 密集匹配
 ---

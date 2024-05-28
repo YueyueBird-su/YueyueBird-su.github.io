@@ -72,7 +72,7 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: 'G-BEB56BM3FK'            #GA_id,创建之后会给你
-ga_domain: blog.goblps.xyz                         #默认是auto，有域名后更改
+ga_domain: auto                         #默认是auto，有域名后更改
 
 
 # Sidebar settings
@@ -102,9 +102,6 @@ page-mathjax: false
 # Friends
 friends: [
     {
-    #     title: "Su",
-    #     href: "http://su/"
-    # },{
         title: "YueyueBird-su",
         href: "https://github.com/YueyueBird-su"
     }
